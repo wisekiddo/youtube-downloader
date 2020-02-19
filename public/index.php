@@ -2,8 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>youtube-downloader</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Download</title>
 </head>
 <body>
 
@@ -11,20 +10,21 @@
 <?php
 
 require('../vendor/autoload.php');
+header('Content-Type: application/json');
+
 
 use YouTube\YouTubeDownloader;
+
 $youtubeURL = htmlspecialchars($_GET["url"]);
 echo $youtubeURL;
 
 $youtube = new YouTubeDownloader();
 $links = $youtube->getDownloadLinks($youtubeURL);
 
-echo ' oead'.$links;
+echo ' oead' . $links;
 
 
-header('Content-Type: application/json');
 echo json_encode($links, JSON_PRETTY_PRINT);
-
 
 
 ?>
