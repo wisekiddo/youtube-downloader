@@ -7,8 +7,8 @@
 
 
 use YouTube\YouTubeDownloader;
-echo "Hello World!";
-
+$youtubeURL = htmlspecialchars($_GET["url"]);
+echo $youtubeURL;
 
 $downloader = new YouTubeDownloader();
 const SWIFT = 'https://www.youtube.com/watch?v=e-ORhEE9VVg';
