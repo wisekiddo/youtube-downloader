@@ -20,8 +20,8 @@ for ($x = 0; $x < count($links); $x++) {
 
     $videoFormatHold = $links[$x]['format'];
 
-    // echo $videoTag;
-    if (stripos($videoFormatHold, 'mp4, 360p') === true || stripos($videoFormatHold, 'mp4, 480p') === true) {
+     echo $videoFormatHold;
+    /*if (stripos($videoFormatHold, 'mp4, 360p') === true || stripos($videoFormatHold, 'mp4, 480p') === true) {
         $videoTitle = "video " . $x;
         $downloadURL = $links[$x]['url'];
         $videoFormat = $links[$x]['format'];
@@ -30,8 +30,8 @@ for ($x = 0; $x < count($links); $x++) {
         $videoTitle = "video " . $x;
         $downloadURL = $links[$x]['url'];
         $videoFormat = $links[$x]['format'];
-        break;
-    }
+        // break;
+    }*/
 
 }
 
