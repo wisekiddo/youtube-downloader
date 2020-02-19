@@ -12,8 +12,10 @@ $handler = new YouTubeDownload();
 // Youtube video url
 $youtubeURL = htmlspecialchars($_GET["url"]);
 
+echo "url---->".$youtubeURL;
+
 // Check whether the url is valid
-if (!empty($youtubeURL) && !filter_var($youtubeURL, FILTER_VALIDATE_URL) === false) {
+if (!empty($youtubeURL)) {
     // Get the downloader object
     $downloader = $handler->getDownloader($youtubeURL);
 
