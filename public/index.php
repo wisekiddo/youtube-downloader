@@ -1,4 +1,3 @@
-
 <?php
 require('../vendor/autoload.php');
 
@@ -12,7 +11,7 @@ $handler = new YouTubeDownload();
 // Youtube video url
 $youtubeURL = htmlspecialchars($_GET["url"]);
 
-echo "url---->".$youtubeURL;
+echo "url---->" . $youtubeURL;
 
 // Check whether the url is valid
 if (!empty($youtubeURL)) {
@@ -71,9 +70,7 @@ if (!empty($youtubeURL)) {
 }
 
 
-
-
-
+?>
 
 
 /*use YouTube\YouTubeDownloader;
