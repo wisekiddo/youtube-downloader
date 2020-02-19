@@ -34,10 +34,10 @@
         return urlparameter;
     }
 
-    print('<p> sample </p>');
+    document.write('<div>Print this after the script tag</div>');
+
     var mytext = getUrlParam('url','');
 
-    print("<p>#mytext</p>");
 
     $(function () {
 
