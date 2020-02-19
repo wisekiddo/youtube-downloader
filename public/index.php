@@ -1,6 +1,6 @@
 
 <?php
-
+require('../vendor/autoload.php');
 
 $videoFormatHold = $youtubeURL = $videoTitle = $videoQuality = $videoFormat = $videoFileName = $downloadURL = $status = $statusMsg = '';
 $isVideo = 0;
