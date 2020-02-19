@@ -13,7 +13,7 @@ $links = $youtube->getDownloadLinks($youtubeURL);
 //echo ' oead' . $links;
 
 
-echo json_encode($links, JSON_PRETTY_PRINT);
+//echo json_encode($links, JSON_PRETTY_PRINT);
 
 
 for ($x = 0; $x < count($links); $x++) {
@@ -21,7 +21,7 @@ for ($x = 0; $x < count($links); $x++) {
     $videoFormatHold = $links[$x]['format'];
 
     if (strpos($videoFormatHold, 'mp4') !== true)
-        brea;
+        break;
 
     $videoTitle   = "video";
     $downloadURL  = $links[$x]['url'];
