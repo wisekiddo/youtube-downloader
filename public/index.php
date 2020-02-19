@@ -37,7 +37,7 @@
 
             console.log(first);
 
-            echo '{"title":"' . $videoTitle . '", "format":"'.$videoFormat.'", "url":"' . $downloadURL . '"}';
+           // echo '{"title":"' . $videoTitle . '", "format":"'.$videoFormat.'", "url":"' . $downloadURL . '"}';
 
             var stream_url = 'stream.php?url=' + encodeURIComponent(first['url']);
 
