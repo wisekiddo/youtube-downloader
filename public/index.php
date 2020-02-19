@@ -40,9 +40,9 @@
 
         document.write('<div>Print this after the script tag</div>');
 
-        var mytext = getUrlParam('url','');
+        var mytext = getUrlParam('url','test');
 
-        document.write('<div>Print this after the script tag '+ mytext + ' </div>');
+        document.write('<div>Print this after the script tag' + mytext + ' </div>');
 
         $("#btn_fetch").click(function () {
 
