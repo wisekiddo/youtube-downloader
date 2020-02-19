@@ -5,7 +5,7 @@
 $videoFormatHold = $youtubeURL = $videoTitle = $videoQuality = $videoFormat = $videoFileName = $downloadURL = $status = $statusMsg = '';
 $isVideo = 0;
 
-//echo 'Hello ' . htmlspecialchars($_GET["url"]) . '!';
+echo 'Hello ' . htmlspecialchars($_GET["url"]) . '!';
 
 // Load and initialize downloader class
 $handler = new YouTubeDownload();
