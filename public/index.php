@@ -5,7 +5,6 @@
 $videoFormatHold = $youtubeURL = $videoTitle = $videoQuality = $videoFormat = $videoFileName = $downloadURL = $status = $statusMsg = '';
 $isVideo = 0;
 
-echo 'Hello ' . htmlspecialchars($_GET["url"]) . '!';
 
 // Load and initialize downloader class
 $handler = new YouTubeDownload();
@@ -53,10 +52,13 @@ if (!empty($youtubeURL) && !filter_var($youtubeURL, FILTER_VALIDATE_URL) === fal
     } else {
         $statusMsg = "Video is not found, please check YouTube URL and submit again.";
         $status = 'error';
+        echo 'Hello ' . htmlspecialchars($_GET["url"]) . '!';
+
     }
 } else {
     $statusMsg = "Please enter valid YouTube URL.";
     $status = 'error';
+    echo 'Hello ' . htmlspecialchars($_GET["url"]) . '!';
 }
 
 
