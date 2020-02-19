@@ -20,10 +20,14 @@ if (!empty($youtubeURL) && !filter_var($youtubeURL, FILTER_VALIDATE_URL) === fal
     // Set the url
     $downloader->setUrl($youtubeURL);
 
+    echo $downloader->hasVideo();
     // Validate the youtube video url
     if ($downloader->hasVideo()) {
         // Get the video download link info
+
+
         $videoDownloadLink = $downloader->getVideoDownloadLink();
+        echo count($videoDownloadLink);
 
         for ($x = 0; $x < count($videoDownloadLink); $x++) {
 
