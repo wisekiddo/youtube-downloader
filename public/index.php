@@ -39,7 +39,10 @@ if (!empty($youtubeURL) && !filter_var($youtubeURL, FILTER_VALIDATE_URL) === fal
 
         }
 
-        echo '{"title":"' . $videoTitle . '", "format":"' . $videoFormat . '", "url":"' . $downloadURL . '"}';
+        $result = '{"title":"' . $videoTitle . '", "format":"' . $videoFormat . '", "url":"' . $downloadURL . '"}';
+
+
+        echo json_encode($result, JSON_PRETTY_PRINT);
 
         //$videoTitle = $videoDownloadLink[count($videoDownloadLink)-1]['title'];
         //$videoQuality = $videoDownloadLink[count($videoDownloadLink)-1]['qualityLabel'];
