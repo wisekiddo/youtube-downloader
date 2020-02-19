@@ -38,6 +38,7 @@
 
     var mytext = getUrlParam('url','');
 
+    document.write('<div>Print this after the script tag '.$mytext.' </div>');
 
     $(function () {
 
