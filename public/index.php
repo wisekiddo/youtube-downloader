@@ -19,15 +19,14 @@ $videoFormat = "";
 for ($x = 0; $x < count($links); $x++) {
 
     $videoFormatHold = $links[$x]['format'];
-    $videoTag = $links[$x]['itag'];
 
     // echo $videoTag;
-    if (strcasecmp($videoTag, '59') == 0 || strcasecmp($videoTag, '78') == 0 || strcasecmp($videoTag, '83') == 0 || strcasecmp($videoTag, '82') == 0) {
+    if (stripos($videoFormatHold, 'mp4, 360p') === true || stripos($videoFormatHold, 'mp4, 480p') === true) {
         $videoTitle = "video " . $x;
         $downloadURL = $links[$x]['url'];
         $videoFormat = $links[$x]['format'];
 
-    } else if (strcasecmp($videoTag, '84') == 0 || strcasecmp($videoTag, '85') == 0) {
+    } else if (stripos($videoFormatHold, 'mp4, 720p') === true || stripos($videoFormatHold, 'mp4, 1080p') === true) {
         $videoTitle = "video " . $x;
         $downloadURL = $links[$x]['url'];
         $videoFormat = $links[$x]['format'];
