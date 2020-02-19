@@ -10,7 +10,6 @@ $isVideo = 0;
 //echo 'Hello ' . htmlspecialchars($_GET["url"]) . '!';
 
 // Load and initialize downloader class
-require_once 'YouTubeDownloader.class.php';
 $handler = new YouTubeDownloader();
 
 // Youtube video url
