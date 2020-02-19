@@ -26,7 +26,6 @@
 
 <script>
 
-
     $(function () {
 
         document.write('<div>Print this after the script tag</div>');
@@ -39,35 +38,29 @@
         document.write('<div>Print this after the script tag -' + url + ' </div>');
 
 
+        var oThis = $(this);
+        oThis.attr('disabled', true);
 
-        $("#btn_fetch").click(function () {
+        $.get('video_info.php', {url: url}, function (data) {
 
-            var url = $("#txt_url").val();
+            oThis.attr('disabled', false);
 
-            var oThis = $(this);
-            oThis.attr('disabled', true);
+            console.log(data);
 
-            $.get('video_info.php', {url: url}, function (data) {
-
-                oThis.attr('disabled', false);
-
-                console.log(data);
-
-                // first link with video
-                var first = data.find(function (link) {
-                    return link['format'].indexOf('video') !== -1;
-                });
-
-                console.log(first);
-
-                var stream_url = 'stream.php?url=' + encodeURIComponent(first['url']);
-
-                var video = $("video");
-                video.attr('src', stream_url);
-                video[0].load();
+            // first link with video
+            var first = data.find(function (link) {
+                return link['format'].indexOf('video') !== -1;
             });
 
+            console.log(first);
+
+            var stream_url = 'stream.php?url=' + encodeURIComponent(first['url']);
+
+            var video = $("video");
+            video.attr('src', stream_url);
+            video[0].load();
         });
+
 
     });
 </script>
