@@ -10,7 +10,7 @@ $youtubeURL = htmlspecialchars($_GET["url"]);
 $youtube = new YouTubeDownloader();
 $links = $youtube->getDownloadLinks($youtubeURL);
 
-echo json_encode($links, JSON_PRETTY_PRINT);
+//echo json_encode($links, JSON_PRETTY_PRINT);
 
 $videoTitle = "video";
 $downloadURL = "";
@@ -20,7 +20,7 @@ for ($x = 0; $x < count($links); $x++) {
 
     $videoFormatHold = $links[$x]['format'];
 
-    echo $videoFormatHold;
+    //echo $videoFormatHold;
     if (strcasecmp($videoFormatHold, 'mp4, 360p, video/audio') == 0 || strcasecmp($videoFormatHold, 'mp4, 480p, video/audio') == 0) {
         $videoTitle = "video " . $x;
         $downloadURL = $links[$x]['url'];
