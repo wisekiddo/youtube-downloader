@@ -21,12 +21,12 @@ for ($x = 0; $x < count($links); $x++) {
     $videoFormatHold = $links[$x]['format'];
 
     //echo $videoFormatHold;
-    if (strcasecmp($videoFormatHold, 'mp4, 360p, video/audio') == 0 || strcasecmp($videoFormatHold, 'mp4, 480p, video/audio') == 0 || strcasecmp($videoFormatHold, 'mp4, 480p, video') == 0 || strcasecmp($videoFormatHold, 'mp4, 360p, video') == 0) {
+    if (strcasecmp($videoFormatHold, 'mp4, 360p, video/audio') == 0 || strcasecmp($videoFormatHold, 'mp4, 480p, video/audio') == 0 ) {
         $videoTitle = "video " . $x;
         $downloadURL = $links[$x]['url'];
         $videoFormat = $links[$x]['format'];
 
-    } else if (strcasecmp($videoFormatHold, 'mp4, 720p, video/audio') == 0 || strcasecmp($videoFormatHold, 'mp4, 1080p, video/audio') == 0 || strcasecmp($videoFormatHold, 'mp4, 720p, video') == 0 || strcasecmp($videoFormatHold, 'mp4, 1080p, video') == 0) {
+    } else if (strcasecmp($videoFormatHold, 'mp4, 720p, video/audio') == 0 || strcasecmp($videoFormatHold, 'mp4, 1080p, video/audio') == 0) {
         $videoTitle = "video " . $x;
         $downloadURL = $links[$x]['url'];
         $videoFormat = $links[$x]['format'];
