@@ -28,15 +28,10 @@
 
     $(function () {
 
-        document.write('<div>Print this after the script tag</div>');
-
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const url = urlParams.get('url')
         console.log(url);
-
-        document.write('<div>Print this after the script tag -' + url + ' </div>');
-
 
         var oThis = $(this);
         oThis.attr('disabled', true);
