@@ -21,16 +21,14 @@ for ($x = 0; $x < count($links); $x++) {
     $videoFormatHold = $links[$x]['format'];
     $videoTag = $links[$x]['itag'];
 
-    echo $videoTag;
-    if( strcasecmp($videoTag,'59') ==0 || strcasecmp($videoTag,'78')==0 || strcasecmp($videoTag,'83')==0 || strcasecmp($videoTag,'82')==0){
-        $videoTitle = "video ".$x;
+    // echo $videoTag;
+    if (strcasecmp($videoTag, '59') == 0 || strcasecmp($videoTag, '78') == 0 || strcasecmp($videoTag, '83') == 0 || strcasecmp($videoTag, '82') == 0) {
+        $videoTitle = "video " . $x;
         $downloadURL = $links[$x]['url'];
         $videoFormat = $links[$x]['format'];
 
-    }
-
-    else if( strcasecmp($videoTag,'84') ==0 || strcasecmp($videoTag,'85')==0){
-        $videoTitle = "video ".$x;
+    } else if (strcasecmp($videoTag, '84') == 0 || strcasecmp($videoTag, '85') == 0) {
+        $videoTitle = "video " . $x;
         $downloadURL = $links[$x]['url'];
         $videoFormat = $links[$x]['format'];
         break;
