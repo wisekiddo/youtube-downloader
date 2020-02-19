@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 use YouTube\YouTubeDownloader;
 
 $youtubeURL = htmlspecialchars($_GET["url"]);
-echo $youtubeURL;
+//echo $youtubeURL;
 
 $youtube = new YouTubeDownloader();
 $links = $youtube->getDownloadLinks($youtubeURL);
@@ -14,6 +14,22 @@ $links = $youtube->getDownloadLinks($youtubeURL);
 
 
 echo json_encode($links, JSON_PRETTY_PRINT);
+
+
+for ($x = 0; $x < count($links); $x++) {
+
+    $videoFormatHold = $links[$x]['format'];
+
+    if (strpos($videoFormatHold, 'mp4') !== true)
+        brea;
+
+    $videoTitle   = "video";
+    $downloadURL  = $links[$x]['url'];
+    $videoFormat = $links[$x]['format'];
+
+}
+
+echo '{"title":"' . $videoTitle . '", "format":"'.$videoFormat.'", "url":"' . $downloadURL . '"}';
 
 
 
