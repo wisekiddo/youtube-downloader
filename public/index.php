@@ -13,6 +13,9 @@ echo $youtubeURL;
 $youtube = new YouTubeDownloader();
 $links = $youtube->getDownloadLinks($youtubeURL);
 
+echo $links;
+
+
 header('Content-Type: application/json');
 echo json_encode($links, JSON_PRETTY_PRINT);
 
