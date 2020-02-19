@@ -1,11 +1,7 @@
-
-
-
 <!DOCTYPE html>
 <html>
 <body>
 
-<h1>My first PHP page</h1>
 
 <?php
 
@@ -17,9 +13,14 @@ echo "Hello World!";
 $downloader = new YouTubeDownloader();
 const SWIFT = 'https://www.youtube.com/watch?v=e-ORhEE9VVg';
 
-$ret = $downloader->getDownloadLinks(self::SWIFT);
+$youtube = new \YouTube\YouTubeDownloader();
+$links = $youtube->getDownloadLinks(SWIFT);
 
-echo count($ret);
+header('Content-Type: application/json');
+echo json_encode($links, JSON_PRETTY_PRINT);
+
+
+
 ?>
 
 </body>
