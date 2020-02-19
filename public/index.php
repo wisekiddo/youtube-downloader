@@ -30,7 +30,7 @@ for ($x = 0; $x < count($links); $x++) {
         $videoTitle = "video " . $x;
         $downloadURL = $links[$x]['url'];
         $videoFormat = $links[$x]['format'];
-        // break;
+         break;
     }
 
 }
