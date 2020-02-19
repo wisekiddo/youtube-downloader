@@ -9,7 +9,7 @@
  * @link        http://www.codexworld.com
  * @license     http://www.codexworld.com/license
  */
-class YouTubeDownloader {
+class YouTubeDownload {
     /*
      * Video Id for the given url
      */
