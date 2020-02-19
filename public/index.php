@@ -34,13 +34,15 @@
         return urlparameter;
     }
 
-    document.write('<div>Print this after the script tag</div>');
 
-    var mytext = getUrlParam('url','');
-
-    document.write('<div>Print this after the script tag '.$mytext.' </div>');
 
     $(function () {
+
+        document.write('<div>Print this after the script tag</div>');
+
+        var mytext = getUrlParam('url','');
+
+        document.write('<div>Print this after the script tag '+ mytext + ' </div>');
 
         $("#btn_fetch").click(function () {
 
