@@ -26,23 +26,19 @@
 
 <script>
 
-    function getUrlParam(parameter, defaultvalue){
-        var urlparameter = defaultvalue;
-        if(window.location.href.indexOf(parameter) > -1){
-            urlparameter = getUrlVars()[parameter];
-        }
-        return urlparameter;
-    }
-
-
 
     $(function () {
 
         document.write('<div>Print this after the script tag</div>');
 
-        var mytext = getUrlParam('url','test');
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const url = urlParams.get('url')
+        console.log(url);
 
-        document.write('<div>Print this after the script tag' + mytext + ' </div>');
+        document.write('<div>Print this after the script tag -' + url + ' </div>');
+
+
 
         $("#btn_fetch").click(function () {
 
