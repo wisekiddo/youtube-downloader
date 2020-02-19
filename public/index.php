@@ -1,5 +1,7 @@
 <?php
 require('../vendor/autoload.php');
+header('Content-Type: application/json');
+
 
 $videoFormatHold = $youtubeURL = $videoTitle = $videoQuality = $videoFormat = $videoFileName = $downloadURL = $status = $statusMsg = '';
 $isVideo = 0;
@@ -70,7 +72,7 @@ if (!empty($youtubeURL)) {
 }
 
 
-?>
+
 
 
 /*use YouTube\YouTubeDownloader;
