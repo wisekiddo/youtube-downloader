@@ -2,14 +2,17 @@
 require('../vendor/autoload.php');
 header('Content-Type: application/json');
 
-use YouTube\YouTubeDownloader;
+use YouTube\YouTubeStreamer;
 
 $youtubeURL = htmlspecialchars($_GET["url"]);
 //echo $youtubeURL;
 
-$youtube = new YouTubeDownloader();
+$youtube = new YouTubeStreamer();
 $links = $youtube->getDownloadLinks($youtubeURL);
 
+$youtube = new \YouTube\YoutubeStreamer();
+$youtube->stream($url);
+echo $youtube;
 //echo json_encode($links, JSON_PRETTY_PRINT);
 
 $videoTitle = "video";
@@ -20,7 +23,7 @@ for ($x = 0; $x < count($links); $x++) {
 
     $videoFormatHold = $links[$x]['format'];
 
-    //echo $videoFormatHold;
+
     if (strcasecmp($videoFormatHold, 'mp4, 360p, video/audio') == 0 || strcasecmp($videoFormatHold, 'mp4, 480p, video/audio') == 0 ) {
         $videoTitle = "video " . $x;
         $downloadURL = $links[$x]['url'];
