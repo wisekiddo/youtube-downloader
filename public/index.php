@@ -5,7 +5,7 @@ header('Content-Type: application/json');
 use YouTube\YouTubeStreamer;
 
 $youtubeURL = htmlspecialchars($_GET["url"]);
-//echo $youtubeURL;
+echo $youtubeURL;
 
 $youtube = new YouTubeStreamer();
 $links = $youtube->stream($youtubeURL);
