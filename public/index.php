@@ -8,11 +8,10 @@ $youtubeURL = htmlspecialchars($_GET["url"]);
 //echo $youtubeURL;
 
 $youtube = new YouTubeStreamer();
-$links = $youtube->getDownloadLinks($youtubeURL);
+$links = $youtube->stream($youtubeURL);
 
-$youtube = new \YouTube\YoutubeStreamer();
-$youtube->stream($url);
-echo $youtube;
+
+echo $links;
 //echo json_encode($links, JSON_PRETTY_PRINT);
 
 $videoTitle = "video";
